@@ -6,24 +6,45 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "A van drives away with a truck load of gems",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Follow the van",
+                    nextLevel: "abandoned_road",
                 },
 
                 {
                     text: "Keep on moving",
-                    nextLevel: "field",
+                    nextLevel: "tv",
                 },
             ]
         },
 
-        cave: {
+        abandoned_road: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "Stall them!",
+            choices: [
+                {
+                    text: "play possum in the road",
+                    nextLevel: "start",
+                },
+            ]
+        },
+            distraction: {
+                background_image:"",
+                music: "",
+                message: "Stall them!",
+                choices: [
+                    {
+                      text: "",
+                      nextLevel: "",
+                    },
+                ]
+            },
+
+        tv: {
+            message: "NEWS FLASH: JEWEL SMUGGLERS AT LARGE! who could've seen this coming?!...",
             choices: [
                 {
                     text: "Start over",
@@ -31,16 +52,15 @@ var game = {
                 },
             ]
         },
-
-        field: {
-            message: "Some adventurer you are...",
+        
+        dark_road: {
+            message: "it was dark outside... they didn't have their headlights on.",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Start Over",
                     nextLevel: "start",
-                },
+                },  
             ]
         },
-
     }
 };
